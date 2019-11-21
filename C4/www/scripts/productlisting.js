@@ -26,7 +26,7 @@ $(document).ready(function () {
                 var responselength = resp.message.length;
 
 
-                if (resp.status == 1) {
+                if (resp.status === 1) {
                     //creating a variable to store the final display conetent          
                     var ProductContent = '';
                     // creating two varible for the limit of items looped out each row in the page.
@@ -53,7 +53,14 @@ $(document).ready(function () {
                             '<br>' + value.product_color +
                             '<br>' + value.product_category +
                             '<br>' +   
-                        '<button pid="' + value.product_id + '" pname="' + value.product_name + '" pprice="' + value.product_price + '" ppicture="' + value.product_picture + '"  ppicture2="' + value.product_picture_2 + '"  ppicture3="' + value.product_picture_3 + '"  ppicture4="' + value.product_picture_4 + '" pbrand="' + value.product_brand + '" pcolor="' + value.product_color + '" pcategory="' + value.product_category + '"  align: center  class="btn btn-success view-product btn-xs centeritem">View</button></div></div></div>';
+                            '<button pid="' + value.product_id + '" pname="' + value.product_name
+                            + '" pprice="' + value.product_price + '" ppicture="' + value.product_picture
+                            + '"  ppicture2="' + value.product_picture_2 + '"  ppicture3="' + value.product_picture_3
+                            + '"  ppicture4="' + value.product_picture_4 + '" pbrand="' + value.product_brand + '" pcolor="'
+                            + value.product_color + '" pcategory="' + value.product_category
+                            + '"  align: center  class="btn btn-success view-product btn-xs centeritem">View</button>' +
+                            '<button pid="' + value.product_id + '">Add</button> '
+                            + '</div></div></div>';
                                                                                           
                         
    

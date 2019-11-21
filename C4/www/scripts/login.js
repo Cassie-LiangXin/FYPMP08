@@ -79,7 +79,7 @@
             localStorage.setItem("customer_email", customer_email);
 
             /*validationMsgs("Login OK", "Information", "OK");*/
-            window.location = "profile.html";
+            window.location = "productlisting.html";
         }
         else {
             
