@@ -3,7 +3,8 @@
 $(document).ready(function () {
 
     $(document.body).on('click', '.add-cart', function () {
-
+        var productid = $(this).attr('pid');
+        localStorage["productid"] = productid;
         addcart();
 
     });
@@ -13,15 +14,16 @@ $(document).ready(function () {
         var url = serverURL() + "/shoppingcart.php";
             var result;
 
-            var productid = $(this).attr('pid');
-            
+            var productid = localStorage.getItem("productid");
+            var customer_email = localStorage.getItem("customer_email");
+
 
 
 
 
             var JSONObject = {
                 "productid": productid,
-                "customer_password": customer_password
+                "customer_email": customer_email
             };
 
 
@@ -32,7 +34,7 @@ $(document).ready(function () {
                 dataType: 'json',
                 contentType: "application/json; charset=utf-8",
                 success: function (arr) {
-                    _getLoginResult(arr);
+                    _getaddcartResult(arr);
                 },
                 error: function () {
                     alert("fail");

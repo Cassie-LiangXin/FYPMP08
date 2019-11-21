@@ -44,7 +44,7 @@
 
             customer_username = $("#txtLogin").val();
             customer_password = $("#txtPassword").val();
-            customer_email = $("#txtLogin").val();
+            customer_email = $("#txtemail").val();
 
      
 
@@ -79,7 +79,7 @@
             localStorage.setItem("customer_email", customer_email);
 
             /*validationMsgs("Login OK", "Information", "OK");*/
-            window.location = "productlisting.html";
+            window.location = "profile.html";
         }
         else {
             

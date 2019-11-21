@@ -129,9 +129,16 @@
 
 
 
+function shopping() {
+    window.location = "productlisting.html";
+}
+function shoppingcart() {
+    window.location = "shoppingcart.html";
+}
 
-
-
+function orders() {
+    window.location = "myorders.html";
+}
 
 function mydetails() {
     window.location = "mydetails.html";
