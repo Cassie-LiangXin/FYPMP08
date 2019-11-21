@@ -9,6 +9,7 @@ $(document).ready(function () {
   
     //Creating a function that get product basic details from the database
     function GET_ShoppingCart() {
+        var useremail = localStorage.getItem("customer_email");
         var url = "https://bitmp08.projectsbit.org/MobileApp/getshoppingcart.php";
         // this  the start of a ajax function (a fuction use to call to php for database query)
         $.ajax({
@@ -42,16 +43,17 @@ $(document).ready(function () {
 
                     $.each(resp.message, function (index, value) {
                        
-                        // if (tableitemcount < tableitemlimit) {
-                        ProductContent +=
+                        if (useremail === value.customer_email) {
+
+                            ProductContent +=
 
 
-                            ' <input type="checkbox" name="vehicle1" value="Bike"> ' + value.product_id + '<br>'
+                                ' <input type="checkbox" name="vehicle1" value="Bike"> ' + value.product_id + '<br>'
 
 
-                            ;
+                                ;
 
-
+                        }
 
 
                     });
