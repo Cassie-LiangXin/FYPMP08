@@ -6,12 +6,13 @@ var email = $("#email");
 $(document).ready(function () {
     $("#resetrequest").bind("click", function () {
         Fpassword();
+       
     });
 });
 
 
 function Fpassword() {
-    if ($("#FpasswordForm").valid()) {
+    
         var url = serverURL() + "/forgetpassword.php";
         var result;
 
@@ -22,24 +23,27 @@ function Fpassword() {
 
 
         var JSONObject = {
+            "resetrequestsubmit":1,
             "customer_email": customer_email
         };
 
-
+       
         $.ajax({
             url: url,
-            type: 'GET',
+            type: 'POST',
             data: JSONObject,
             dataType: 'json',
             contentType: "application/json; charset=utf-8",
             success: function (arr) {
+                alert("Ajax success");
                 _getFpasswordResult(arr);
+               
             },
             error: function () {
                 alert("fail");
             }
         });
-    }
+   
 }
 
 function _getFpasswordResult(arr) {
