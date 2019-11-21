@@ -2,6 +2,60 @@
 
 $(document).ready(function () {
 
+    $(document.body).on('click', '.add-cart', function () {
+
+        addcart();
+
+    });
+
+    function addcart() {
+       
+        var url = serverURL() + "/shoppingcart.php";
+            var result;
+
+            var productid = $(this).attr('pid');
+            
+
+
+
+
+            var JSONObject = {
+                "productid": productid,
+                "customer_password": customer_password
+            };
+
+
+            $.ajax({
+                url: url,
+                type: 'GET',
+                data: JSONObject,
+                dataType: 'json',
+                contentType: "application/json; charset=utf-8",
+                success: function (arr) {
+                    _getLoginResult(arr);
+                },
+                error: function () {
+                    alert("fail");
+                }
+            });
+        
+    }
+
+    function _getLoginResult(arr) {
+        if (arr[0].result.trim() !== "0") {
+            localStorage.setItem("customer_username", customer_username);
+            localStorage.setItem("customer_password", customer_password);
+            localStorage.setItem("customer_email", customer_email);
+
+            /*validationMsgs("Login OK", "Information", "OK");*/
+            window.location = "productlisting.html";
+        }
+        else {
+
+            validationMsgs("Error in Username or Password", "Validation", "Try Again");
+        }
+    }
+
     //Activiating this fuction;
     getProduct();
 
@@ -59,7 +113,7 @@ $(document).ready(function () {
                             + '"  ppicture4="' + value.product_picture_4 + '" pbrand="' + value.product_brand + '" pcolor="'
                             + value.product_color + '" pcategory="' + value.product_category
                             + '"  align: center  class="btn btn-success view-product btn-xs centeritem">View</button>' +
-                            '<button pid="' + value.product_id + '">Add</button> '
+                            '<button  class="btn btn-success add-cart btn-xs centeritem" pid="' + value.product_id + '">Add</button> '
                             + '</div></div></div>';
                                                                                           
                         
