@@ -1,0 +1,465 @@
+﻿body {
+    font-size: 14px;
+    color: #fff;
+  
+ 
+}
+
+.background {
+    background-image: url(../images/login2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    
+}
+
+
+.simple-login-container {
+    width: 300px;
+    max-width: 100%;
+    margin: 50px auto;
+}
+
+    .simple-login-container h2 {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .simple-login-container .btn-login {
+        background-color: #FF5964;
+        color: #fff;
+    }
+
+
+
+
+
+span.a {
+    display: inline; /* the default for span */
+}
+
+.buttonedit {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.buttonedit1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+}
+
+
+    .buttonedit1:hover {
+        background-color: #008CBA;
+        color: white;
+    }
+
+.buttonedit1 {
+    width: 100%;
+}
+
+.button {
+    display: inline-block;
+    background-color: #4CAF50;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 16px 32px;
+    transition: all 0.3s;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+}
+
+
+    .button1:hover {
+        background-color: #008CBA;
+        color: white;
+        transition: 0.1s;
+    }
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+}
+
+    .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.3s;
+    }
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+    .button:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+
+
+a {
+    font-family: Georgia, "Copperplate Gothic", Times, serif;
+    cursor: auto
+}
+
+    a:link {
+        color: black;
+    }
+
+
+
+    a:hover {
+        text-decoration: none;
+        color: #ff9900;
+        font-weight: bold;
+    }
+
+    a:active {
+        color: black;
+        text-decoration: none
+    }
+
+.container {
+    position: relative;
+    color: black;
+    font-family: "Cambria Math";
+    font-size: 17px;
+}
+
+.ui-loader {
+    display: none !important;
+}
+
+img {
+    border-radius: 15%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -30px;
+    width: 50%;
+}
+
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+
+
+
+h25 {
+    color: #D8000C;
+    background-color: #FFBABA;
+    margin: 10px 21px;
+    padding: 4.8px;
+    border-radius: 3px 3px 3px 3px;
+    
+}
+
+.topnavtopnav {
+    background-color: transparent;
+    overflow: hidden;
+}
+
+    /* Style the links inside the navigation bar */
+    .topnavtopnav a {
+        float: left;
+        display: block;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 0px 15px;
+        text-decoration: none;
+        font-family: "Cambria Math";
+        font-size: 18px;
+        transition: 0.3s;
+    }
+
+        /* Change the color of links on hover / the home button */
+        .topnavtopnav a:hover {
+            background: powderblue;
+            color: black;
+            text-decoration: underline;
+            text-decoration-color: black;
+        }
+
+        .topnavtopnav a.index {
+            background-color: #f60782;
+        }
+
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-bottom: 1.5px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    border-radius: 25px;
+}
+
+    input[type=text]:focus {
+        border: 3px solid #555;
+    }
+
+
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-bottom: 1.5px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    border-radius: 25px;
+}
+
+    input[type=password]:focus {
+        border: 3px solid #555;
+    }
+
+
+
+
+/*Log Out Button*/
+
+
+.container1,
+.first {
+    position: absolute;
+}
+
+.container1 {
+    margin: auto;
+    top: 500px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 170px;
+    height: 50px;
+    transition: all 0.3s ease;
+}
+
+.wrap {
+    width: 100%;
+    height: 60px;
+    border: 1.5px solid #FFF;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.first {
+    width: 100%;
+    height: 50px;
+    font-family: 'Open Sans', sans-serif;
+    transition: all 0.2s ease-in-out;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #FFF;
+    letter-spacing: 2px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+}
+
+
+
+.container1:hover {
+    width: 350px;
+    .wrap
+
+{
+    padding-bottom: 17px;
+}
+
+.first {
+    transform: translateY(-8px);
+    padding-top: 5px;
+}
+
+.second {
+    transform: translateY(20px);
+    opacity: 1;
+}
+}
+
+
+.buttonnew {
+  border-radius: 25px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 10px;
+  width: 100%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.buttonnew span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.buttonnew span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.buttonnew:hover span {
+  padding-right: 35px;
+}
+
+.buttonnew:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+/*Login Button*/
+
+
+@import 'https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&subset=cyrillic,cyrillic-ext,latin-ext';
+
+
+
+
+button {
+    color: #454545;
+    background: #F8BBBB;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #454545;
+    position: relative;
+    width: 100%;
+    margin: 1em;
+    display: inline-block;
+    padding: 0.5em 1em;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    font-family: comfortaa;
+    font-weight: bold;
+}
+
+    button:before, button:after {
+        content: '';
+        display: block;
+        position: absolute;
+        border-color: #454545;
+        box-sizing: border-box;
+        border-style: solid;
+        width: 1em;
+        height: 1em;
+        transition: all 0.3s ease-in-out
+    }
+
+    button:before {
+        top: -6px;
+        left: -6px;
+        border-width: 2px 0 0 2px;
+        z-index: 5;
+    }
+
+    button:after {
+        bottom: -6px;
+        right: -6px;
+        border-width: 0 2px 2px 0;
+    }
+
+    button:hover:before, button:hover:after {
+        width: calc(100% + 12px);
+        height: calc(100% + 12px);
+        border-color: #fff
+    }
+
+    button:hover {
+        color: #353535;
+        background-color: #fff;
+        border-color: #fff
+    }
+
+.panel {
+    max-width: 350px;
+    text-align: center;
+    position: relative;
+    margin: auto;
+}
+
+
+.pink button {
+    color: #eb1777;
+    border-color: #eb1777
+}
+
+    .pink button:before, .pink button:after {
+        border-color: #eb1777
+    }
+
+    .pink button:hover:before, .pink button:hover:after {
+        border-color: #eb1777;
+    }
+
+    .pink button:hover {
+        color: #fff;
+        background-color: #eb1777;
+        border-color: #eb1777;
+    }
+
+.pink .panel {
+    max-width: 960px;
+    text-align: center;
+    position: relative;
+    margin: auto;
+}
+
+
+:focus {
+    outline: 0;
+    outline-color: transparent;
+    outline-style: none;
+}
+
+
+

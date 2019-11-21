@@ -1,0 +1,589 @@
+﻿body {
+    background-image: url('../images/profilebackground.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+img {
+    border-radius: 50%;
+    margin-left: 100px;
+    margin-top: 10px;
+    height: 120px;
+    width: 140px;
+}
+
+
+
+.ui-loader {
+    display: none !important;
+}
+
+h1 {
+    text-align:center;
+}
+
+p {
+    width: 280px;
+    height: 55px;
+    position: relative;
+    padding-right: 205px;
+
+}
+
+
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    
+}
+
+
+
+
+
+#border {
+    border: 2px solid #205c64;
+    padding: 15px;
+    border-radius: 20px 10px;
+
+}
+
+.btn {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100px;
+    height: 140px;
+    text-align:center;
+}
+
+.btn1 {
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+}
+
+
+.button-1 {
+    width: 140px;
+    height: 50px;
+    border: 2px solid #34495e;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0 0 40px 0;
+}
+
+    .button-1 a {
+        font-family: arial;
+        font-size: 16px;
+        color: #34495e;
+        text-decoration: none;
+        line-height: 50px;
+        transition: all .5s ease;
+        z-index: 2;
+        position: relative;
+    }
+
+.eff-1 {
+    width: 140px;
+    height: 50px;
+    top: -2px;
+    right: -140px;
+    background: #34495e;
+    position: absolute;
+    transition: all .5s ease;
+    z-index: 1;
+}
+
+.button-1:hover .eff-1 {
+    right: 0;
+}
+
+.button-1:hover a {
+    color: #fff;
+}
+
+.button-2 {
+    width: 140px;
+    height: 50px;
+    border: 2px solid #34495e;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0 0 40px 50px;
+}
+
+    .button-2 a {
+        font-family: arial;
+        font-size: 16px;
+        color: #34495e;
+        text-decoration: none;
+        line-height: 50px;
+        transition: all .5s ease;
+        z-index: 2;
+        position: relative;
+    }
+
+.eff-2 {
+    width: 140px;
+    height: 50px;
+    top: -50px;
+    background: #34495e;
+    position: absolute;
+    transition: all .5s ease;
+    z-index: 1;
+}
+
+.button-2:hover .eff-2 {
+    top: 0;
+}
+
+.button-2:hover a {
+    color: #fff;
+}
+
+.button-3 {
+    width: 140px;
+    height: 50px;
+    border: 2px solid #34495e;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0 0 40px 50px;
+}
+
+    .button-3 a {
+        font-family: arial;
+        font-size: 16px;
+        color: #34495e;
+        text-decoration: none;
+        line-height: 50px;
+        transition: all .5s ease;
+        z-index: 2;
+        position: relative;
+    }
+
+.eff-3 {
+    width: 140px;
+    height: 50px;
+    bottom: -50px;
+    background: #34495e;
+    position: absolute;
+    transition: all .5s ease;
+    z-index: 1;
+}
+
+.button-3:hover .eff-3 {
+    bottom: 0;
+}
+
+.button-3:hover a {
+    color: #fff;
+}
+
+.button-4 {
+    width: 140px;
+    height: 50px;
+    border: 2px solid #34495e;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0 0 40px 50px;
+}
+
+    .button-4 a {
+        font-family: arial;
+        font-size: 16px;
+        color: #34495e;
+        text-decoration: none;
+        line-height: 50px;
+        transition: all .5s ease;
+        z-index: 2;
+        position: relative;
+    }
+
+.eff-4 {
+    width: 140px;
+    height: 50px;
+    left: -140px;
+    background: #34495e;
+    position: absolute;
+    transition: all .5s ease;
+    z-index: 1;
+}
+
+.button-4:hover .eff-4 {
+    left: 0;
+}
+
+.button-4:hover a {
+    color: #fff;
+}
+
+.button-5 {
+    width: 140px;
+    height: 50px;
+    border: 2px solid #34495e;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0 0 40px 0;
+}
+
+    .button-5 a {
+        font-family: arial;
+        font-size: 16px;
+        color: #34495e;
+        text-decoration: none;
+        line-height: 50px;
+        transition: all .5s ease;
+        z-index: 2;
+        position: relative;
+    }
+
+.eff-5 {
+    width: 140px;
+    height: 50px;
+    left: -140px;
+    top: -50px;
+    background: #34495e;
+    position: absolute;
+    transition: all .5s ease;
+    z-index: 1;
+}
+
+.button-5:hover .eff-5 {
+    left: 0;
+    top: 0;
+}
+
+.button-5:hover a {
+    color: #fff;
+}
+
+.button-6 {
+    width: 140px;
+    height: 50px;
+    border: 2px solid #34495e;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0 0 40px 50px;
+}
+
+    .button-6 a {
+        font-family: arial;
+        font-size: 16px;
+        color: #34495e;
+        text-decoration: none;
+        line-height: 50px;
+        transition: all .5s ease;
+        z-index: 2;
+        position: relative;
+    }
+
+.eff-6 {
+    width: 140px;
+    height: 50px;
+    right: -140px;
+    bottom: -50px;
+    background: #34495e;
+    position: absolute;
+    transition: all .5s ease;
+    z-index: 1;
+}
+
+.button-6:hover .eff-6 {
+    right: 0;
+    bottom: 0;
+}
+
+.button-6:hover a {
+    color: #fff;
+}
+
+.button-7 {
+    width: 140px;
+    height: 50px;
+    border: 2px solid #34495e;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0 0 40px 50px;
+}
+
+    .button-7 a {
+        font-family: arial;
+        font-size: 16px;
+        color: #34495e;
+        text-decoration: none;
+        line-height: 50px;
+        transition: all .5s ease;
+        z-index: 2;
+        position: relative;
+    }
+
+.eff-7 {
+    width: 140px;
+    height: 50px;
+    border: 0px solid #34495e;
+    position: absolute;
+    transition: all .5s ease;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.button-7:hover .eff-7 {
+    border: 70px solid #34495e;
+}
+
+.button-7:hover a {
+    color: #fff;
+}
+
+.button-8 {
+    width: 140px;
+    height: 50px;
+    border: 2px solid #34495e;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0 0 40px 50px;
+}
+
+    .button-8 a {
+        font-family: arial;
+        font-size: 16px;
+        color: #fff;
+        text-decoration: none;
+        line-height: 50px;
+        transition: all .5s ease;
+        z-index: 2;
+        position: relative;
+    }
+
+.eff-8 {
+    width: 140px;
+    height: 50px;
+    border: 70px solid #34495e;
+    position: absolute;
+    transition: all .5s ease;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.button-8:hover .eff-8 {
+    border: 0px solid #34495e;
+}
+
+.button-8:hover a {
+    color: #34495e;
+}
+
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 9px;
+    height: 160px; /* Should be removed. Only for demonstration */
+}
+
+
+/* Green */
+.success {
+    border-color: #4CAF50;
+    color: green;
+}
+
+    .success:hover {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+/* Blue */
+.info {
+    border-color: #2196F3;
+    color: dodgerblue
+}
+
+    .info:hover {
+        background: #2196F3;
+        color: white;
+    }
+
+/* Orange */
+.warning {
+    border-color: #ff9800;
+    color: orange;
+}
+
+    .warning:hover {
+        background: #ff9800;
+        color: white;
+    }
+
+/* Red */
+.danger {
+    border-color: #f44336;
+    color: red
+}
+
+    .danger:hover {
+        background: #f44336;
+        color: white;
+    }
+
+/* Gray */
+.default {
+    border-color: #e7e7e7;
+    color: black;
+}
+
+    .default:hover {
+        background: #e7e7e7;
+    }
+
+
+
+
+/*Log Out Button*/
+
+
+.container1,
+.first {
+    position: absolute;
+}
+
+.container1 {
+    margin: auto;
+    top: 500px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 170px;
+    height: 50px;
+    transition: all 0.3s ease;
+}
+
+.wrap {
+    width: 100%;
+    height: 60px;
+    border: 1.5px solid #FFF;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.first {
+    width: 100%;
+    height: 50px;
+    font-family: 'Open Sans', sans-serif;
+    transition: all 0.2s ease-in-out;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #FFF;
+    letter-spacing: 2px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+}
+
+
+
+.container1:hover {
+    width: 350px;
+
+
+ .wrap {
+    padding-bottom: 17px;
+}
+
+.first {
+    transform: translateY(-8px);
+    padding-top: 5px;
+}
+
+.second {
+    transform: translateY(20px);
+    opacity: 1;
+}
+
+}
+
+
+
+.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    /* border-right: .15em solid orange;*/ /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    /*letter-spacing: .15em;*/ /* Adjust as needed */
+    animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange;
+    }
+}
+
+
+:focus {
+    outline: 0;
+    outline-color: transparent;
+    outline-style: none;
+}
+
+

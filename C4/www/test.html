@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+     -->
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <!--CSS-->
+
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <!--<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="https://friconix.com/cdn/friconix.js"></script>
+
+
+
+    <!--JS-->
+    <script src="lib/jquery-1.11.2.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/test.js"></script>
+    <script type="text/javascript" src="scripts/common.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="lib/jquery-1.11.2.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="lib/jquery.validate.js"></script>
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merienda&display=swap" rel="stylesheet">
+
+    <title>Profile</title>
+    <link rel="shortcut icon" href="/www/images/logosmall.png">
+
+    
+</head>
+<body>
+
+    <form name="NewUserForm" id="NewUserForm" enctype="multipart/form-data">
+
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <label for="txtfirstname">First Name</label>
+                <input type="text" name="txtfirstname" id="txtfirstname" placeholder="Enter your First Name" class="form-control" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <label for="txtlastname">Last Name</label>
+                <input type="text" name="txtlastname" id="txtlastname" placeholder="Enter your Last Name" class="form-control" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <label for="txtaddress">Address</label>
+                <input type="text" name="txtAddress" id="txtAddress" placeholder="Enter your Address" class="form-control" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <label for="txtcity">City</label>
+                <input type="text" name="txtcity" id="txtcity" placeholder="Enter your City" class="form-control" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <label for="txtpostalcode">Postal Code</label>
+                <input type="text" name="txtpostalcode" id="txtpostalcode" placeholder="Enter your Postal Code" class="form-control" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <label for="txtcountry">Country</label>
+                <input type="text" name="txtcountry" id="txtcountry" placeholder="Enter your Country" class="form-control" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <label for="txtdob">Date of Birth</label>
+                <input type="date" name="txtdob" id="txtdob" placeholder="Enter your Date of Birth" class="form-control" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <label for="txtNewName">User ID</label>
+                <input type="text" name="txtUserID" id="txtUserID" placeholder="Enter a user ID" class="form-control" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <label for="txtNewPassword">Password</label>
+                <input type="password" name="txtNewPassword" id="txtNewPassword" placeholder="Enter your New Password" class="form-control" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <label for="txtNewPasswordAgain">Re-Enter Password</label>
+                <input type="password" name="txtNewPassword" id="txtNewPasswordAgain" placeholder="Enter your New Password Again" class="form-control" required>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required />
+        </div>
+        <div class="form-group">
+            <label for="file">File</label>
+            <input type="file" class="form-control" id="file" name="file" required />
+        </div>
+        <input type="submit" name="submit" class="btn btn-success submitBtn" value="SUBMIT" />
+
+    </form>
+
+
+
+
+
+
+</body>
+</html>

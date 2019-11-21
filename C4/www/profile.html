@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+     -->
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="css/profile.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <!--<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="https://friconix.com/cdn/friconix.js"></script>
+
+
+
+    <!--JS-->
+    <script src="lib/jquery-1.11.2.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/profile.js"></script>
+    <script type="text/javascript" src="scripts/common.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="lib/jquery-1.11.2.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="lib/jquery.validate.js"></script>
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merienda&display=swap" rel="stylesheet">
+
+    <title>Profile</title>
+    <link rel="shortcut icon" href="/www/images/logosmall.png">
+
+
+</head>
+<body class="container">
+
+
+    <div class="user-pic"></div>
+    <div class="typewriter">
+        <h1 style="font-family:'Nunito', sans-serif; font-size:37px">Hi, <span id="lbluserid"></span></h1><br />
+    </div>
+
+
+
+    <div class="row">
+        <div class="column">
+            <button type="button" class="btn success" style="border:1px solid black;">
+                <div style="font-size: 25px;">
+                    <i class="fa fa-archive fa-lg" aria-hidden="true"></i>
+                </div><br />
+                <p>My Orders</p>
+            </button>
+        </div>
+
+
+        <div class="column">
+            <button onclick="mydetails()" type="button" class="btn success" style="border:1px solid black;">
+                <div style="font-size: 35px;">
+                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                </div><br />
+                <p> My Details</p>
+            </button>
+        </div>
+
+
+        <div class="column">
+            <button onclick="changepassword()" type="button" class="btn success" style="border:1px solid black;">
+                <div style="font-size: 35px;">
+                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                </div><br />
+                <p style="margin-top:-18px;">Email And Password</p>
+            </button>
+        </div>
+
+        <div class="column">
+            <button onclick="addressbook()" type="button" class="btn success" style="border:1px solid black;">
+                <div style="font-size: 35px;">
+                    <i class="fa fa-address-book" aria-hidden="true"></i>
+                </div><br />
+                <p> Address Book</p>
+            </button>
+        </div>
+
+
+        <div class="column">
+            <button type="button" class="btn success" style="border:1px solid black;">
+                <div style="font-size: 35px;">
+                    <i class="fa fa-usd" aria-hidden="true"></i>
+                </div><br />
+                <p> Payment Methods</p>
+            </button>
+        </div>
+
+        <div class="column">
+            <button type="button" class="btn success" style="border:1px solid black;">
+                <div style="font-size: 35px;">
+                    <i class="fa fa-gift" aria-hidden="true"></i>
+                </div><br />
+                <p style="margin-top:-18px;"> Gift Card and Vouchers</p>
+            </button>
+        </div>
+
+
+
+    </div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+    <div class="container1">
+        <div class="wrap">
+            <a data-toggle="modal" data-target="#exampleModal">
+                <div class="first">Log Out</div>
+            </a>
+        </div>
+    </div>
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Alert!</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="animated heartBeat">
+                        <div style="font-size: 40px; font-family: 'Merienda', cursive;" align="center">Are you sure?</div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="button-1" data-dismiss="modal">
+                        <div class="eff-1"></div>
+                        <a style="font-family: 'Merienda', cursive;" href="#">No</a>
+                    </div>
+
+                    <div class="button-4" onclick="window.location='login.html';">
+                        <div class="eff-4"></div>
+                        <a style="font-family: 'Merienda', cursive;"> Yes </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

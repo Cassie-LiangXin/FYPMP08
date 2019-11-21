@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+     -->
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="css/ratings.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <!--<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="https://friconix.com/cdn/friconix.js"></script>
+
+
+
+    <!--JS-->
+    <script src="lib/jquery-1.11.2.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="lib/jquery-1.11.2.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="lib/jquery.validate.js"></script>
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merienda&display=swap" rel="stylesheet">
+
+    <title>Ratings</title>
+
+
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script>
+        function setRating(number) {
+            jQuery('#main').css('background', 'url(images/' + number + '-star.gif) no-repeat');
+        }
+
+        function saveRating(number) {
+            jQuery('.rating').attr('onmouseout', 'setRating(\'' + number + '\')');
+            alert(number);
+        }
+    </script>
+    <style>
+        .rating {
+            width: 8px;
+            height: 16px;
+            float: left;
+        }
+
+        #main {
+            width: 80px;
+            height: 16px;
+        }
+    </style>
+    <div id="main" style="background:url(images/1.0-star.gif) no-repeat;">
+        <div class="rating" onmouseover="setRating('0.5')" onclick="saveRating('0.5');" onmouseout="setRating('1.0')"></div>
+        <div class="rating" onmouseover="setRating('1.0')" onclick="saveRating('1.0');" onmouseout="setRating('1.0')"></div>
+        <div class="rating" onmouseover="setRating('1.5')" onclick="saveRating('1.5');" onmouseout="setRating('1.0')"></div>
+        <div class="rating" onmouseover="setRating('2.0')" onclick="saveRating('2.0');" onmouseout="setRating('1.0')"></div>
+        <div class="rating" onmouseover="setRating('2.5')" onclick="saveRating('2.5');" onmouseout="setRating('1.0')"></div>
+        <div class="rating" onmouseover="setRating('3.0')" onclick="saveRating('3.0');" onmouseout="setRating('1.0')"></div>
+        <div class="rating" onmouseover="setRating('3.5')" onclick="saveRating('3.5');" onmouseout="setRating('1.0')"></div>
+        <div class="rating" onmouseover="setRating('4.0')" onclick="saveRating('4.0');" onmouseout="setRating('1.0')"></div>
+        <div class="rating" onmouseover="setRating('4.5')" onclick="saveRating('4.5');" onmouseout="setRating('1.0')"></div>
+        <div class="rating" onmouseover="setRating('5.0')" onclick="saveRating('5.0');" onmouseout="setRating('1.0')"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/ratings.js"></script>
+    <script type="text/javascript" src="scripts/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html class="animated fadeIn">
+<head>
+    <!--
+            Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+            For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: http://* https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/addressbook.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script src="lib/jquery-1.11.2.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="lib/jquery.validate.js"></script>
+
+    <title>Login</title>
+
+</head>
+<body background="images/bk.jpg" style="background-size: 100% 100%;">
+
+
+        <div class="container">
+            <i style="font-size:25px;" class="fa fa-backward" aria-hidden="true" onclick="goBack()"></i><br />
+            <hr />
+            <h1>Existing Address</h1>
+
+            <form id="ChangeAddressForm" name="ChangeAddressForm">
+                <div data-role="fieldcontainer">
+                    <!--<label for="txtOldAddress">Old Address</label>-->
+                    <input type="hidden" name="txtOldAddress" id="txtOldAddress" required>
+                </div>
+
+                <div data-role="fieldcontainer">
+                    <label for="txtNewAddress">New Address</label>
+                    <input type="text" name="txtNewAddress" id="txtNewAddress" onkeyup="manage(this)" required>
+                </div>
+
+                <div data-role="fieldcontainer">
+                    <!--<label for="txtOldCity">Old City</label>-->
+                    <input type="hidden" name="txtOldCity" id="txtOldCity" required>
+                </div>
+
+                <div data-role="fieldcontainer">
+                    <label for="txtNewCity">New City</label>
+                    <input type="text" name="txtNewCity" id="txtNewCity"  onkeyup="manage(this)" required>
+                </div>
+
+                <div data-role="fieldcontainer">
+                    <!--<label for="txtOldPostalCode">Old Postal Code</label>-->
+                    <input type="hidden" name="txtOldPostalCode" id="txtOldPostalCode" required>
+                </div>
+
+                <div data-role="fieldcontainer">
+                    <label for="txtNewPostalCode">New Postal Code</label>
+                    <input type="text" name="txtNewPostalCode" id="txtNewPostalCode"  onkeyup="manage(this)">
+                </div><br />
+
+                <button name="btnSaveAddress" id="btnSaveAddress" style="background-color:palevioletred;" disabled >Update Address</button>
+
+                <p id="demo"></p>
+
+                <script>
+                    function manage(txt) {
+
+                        var bt = document.getElementById('btnSaveAddress');
+
+                        if (document.getElementById("txtOldAddress").value != document.getElementById("txtNewAddress").value || document.getElementById("txtOldCity").value != document.getElementById("txtNewCity").value || document.getElementById("txtOldPostalCode").value != document.getElementById("txtNewPostalCode").value) {
+                             bt.disabled = false;
+    
+                        }
+                        else {
+                             bt.disabled = true;
+   
+                        }
+
+
+
+
+                    }
+
+
+
+
+                </script>
+
+
+                <!-- <h1>New Address</h1>
+
+            <div data-role="fieldcontainer">
+                <label for="txtNewAddress">Address</label>
+                <input type="text" name="txtNewAddress" id="txtNewAddress" required>
+            </div>
+
+            <div data-role="fieldcontainer">
+                <label for="txtNewCity">City</label>
+                <input type="text" name="txtNewCity" id="txtNewCity" required>
+            </div>
+
+            <div data-role="fieldcontainer">
+                <label for="txtNewPostalCode">Postal Code</label>
+                <input type="text" name="txtNewPostalCode" id="txtNewPostalCode" required>
+            </div><br />
+
+
+            <button id="btnSaveUsername" style="background-color:palevioletred; ">Update Address</button> -->
+            </form>
+
+        </div>
+   
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+        <script type="text/javascript" src="scripts/addressbook.js"></script>
+        <script type="text/javascript" src="scripts/common.js"></script>
+     
+</body>
+</html>
+

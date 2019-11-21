@@ -1,0 +1,98 @@
+
+
+/*Icon Bar*/
+.icon-bar {
+    width: 100%;
+    background-color: #fbe6ff;
+    overflow: auto;
+    position: absolute;
+
+}
+
+    .icon-bar a {
+        float: left;
+        width: 20%;
+        text-align: center;
+        padding: 7px 0;
+        transition: all 0.3s ease;
+        color: white;
+
+    }
+
+        .icon-bar a:hover {
+            background-color: violet;
+        }
+
+
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+
+}
+
+body {
+    background-image: white;
+}
+
+
+.ui-loader {
+    display: none !important;
+}
+
+.column {
+    float: left;
+    width: 40%;
+    padding: 23px;
+}
+
+.column1 {
+    float: left;
+    width: 100%;
+    padding: 100px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+
+}
+
+
+
+
+/*Typewriter CSS*/
+.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    animation: 
+        typing 1.5s steps(40, end), 
+        blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange;
+    }
+}

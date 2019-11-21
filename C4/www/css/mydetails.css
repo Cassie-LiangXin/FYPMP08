@@ -1,0 +1,179 @@
+﻿.ui-loader {
+    display: none !important;
+}
+
+body {
+    font-size: 14px;
+    color: #fff;
+}
+
+.background {
+    background-image: url(../images/signup.jpg);
+    background-repeat: no-repeat;
+    background-size: 500px 900px;
+}
+
+
+span.a {
+    display: inline; /* the default for span */
+}
+
+.buttonedit {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.buttonedit1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+}
+
+
+    .buttonedit1:hover {
+        background-color: #008CBA;
+        color: white;
+    }
+
+.buttonedit1 {
+    width: 100%;
+}
+
+
+
+
+a {
+    font-family: Georgia, "Copperplate Gothic", Times, serif;
+    cursor: auto
+}
+
+    a:link {
+        color: black;
+    }
+
+
+
+    a:hover {
+        text-decoration: none;
+        color: #ff9900;
+        font-weight: bold;
+    }
+
+    a:active {
+        color: black;
+        text-decoration: none
+    }
+
+.container {
+    position: relative;
+    color: black;
+    font-family: "Cambria Math";
+    font-size: 17px;
+}
+
+.ui-loader {
+    display: none !important;
+}
+
+img {
+    border-radius: 15%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+
+h25 {
+    color: #D8000C;
+    background-color: #FFBABA;
+    margin: 10px 0;
+    margin-left: 15px;
+    padding: 4.7px;
+    border-radius: 3px 3px 3px 3px;
+}
+
+
+.topnavtopnav {
+    background-color: transparent;
+    overflow: hidden;
+}
+
+    /* Style the links inside the navigation bar */
+    .topnavtopnav a {
+        float: left;
+        display: block;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 0px 15px;
+        text-decoration: none;
+        font-family: "Cambria Math";
+        font-size: 18px;
+        transition: 0.3s;
+    }
+
+        /* Change the color of links on hover / the home button */
+        .topnavtopnav a:hover {
+            background: powderblue;
+            color: black;
+            text-decoration: underline;
+            text-decoration-color: black;
+        }
+
+        .topnavtopnav a.index {
+            background-color: #f60782;
+        }
+
+
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-bottom: 1.5px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    border-radius: 25px;
+}
+
+    input[type=text]:focus {
+        border: 3px solid #555;
+    }
+
+
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-bottom: 1.5px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    border-radius: 25px;
+}
+
+    input[type=password]:focus {
+        border: 3px solid #555;
+    }
+

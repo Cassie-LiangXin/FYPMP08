@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/productlisting.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="lib/jquery-1.11.2.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="lib/jquery.validate.js"></script>
+
+    <title>Product Listing</title>
+</head>
+<body>
+    <div class="container">
+        <!--This is a Division that put everything inside on one row-->
+        <div class="row">
+            <!--This is a Division with class that sets the content color and spacing-->
+            <div class="col-2 whitecolor">
+                <!--This is a title-->
+
+                <h1>Product List</h1>
+            </div>
+            <!--This is a div for a search bar (FORM)-->
+            <div data-role="content" class="ui-content " id="SearchSection">
+                <form class="search-bar" id="product-search-form">
+                    <input type="text" name="pname" class="form-control" placeholder="Enter keywords">
+                    <input type="hidden" name="product_search" value="1">
+                </form>
+            </div>
+            <!--This is a div for a Search Product Button(FORM)-->
+
+            <button class="btn btn-primary search-btn " value="Search Product" id="search-btn">Search Product</button>
+
+            <!--This is a div for a Add Product Button (FORM)-->
+
+            <button onclick="products()" class="btn btn-primary showall-btn " value="Show All" id="showall-btn">Show All</button>
+
+        </div><br />
+    </div>
+    <!--This is a div for a table (FORM)-->
+    <div class="table-responsive">
+        <div id="product_list">
+
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/common.js"></script>
+    <script type="text/javascript" src="scripts/productlisting.js"></script>
+</body>
+</html>

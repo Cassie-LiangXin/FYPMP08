@@ -1,0 +1,125 @@
+﻿
+.ui-content {
+    height: 900px;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.image-container {
+    background-image: url("css/images/appimages/homepage.jpg");
+    background-size: 500px 230px;
+    background-repeat: no-repeat;
+    position: relative; /* Needed to position the cutout text in the middle of the image */
+    height: 230px; /* Some height */
+    border-radius: 33px 40px 40px 40px;
+    border: 1px inset rgba(28,110,164,0.45);
+}
+
+.text {
+    background-color: white;
+    color: black;
+    font-size: 10vw; /* Responsive font size */
+    font-weight: bold;
+    margin: 0 auto; /* Center the text container */
+    padding: 10px;
+    width: 50%;
+    text-align: center; /* Center text */
+    position: absolute; /* Position text */
+    top: 50%; /* Position text in the middle */
+    left: 50%; /* Position text in the middle */
+    transform: translate(-50%, -50%); /* Position text in the middle */
+}
+
+.buttontrack {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #cef5ed;
+    border: none;
+    color: #808080;
+    text-align: left;
+    font-size: 15px;
+    padding: 20px;
+    width: 200px;
+    height: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+    .buttontrack span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+        font-weight: bold;
+    }
+
+        .buttontrack span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+            font-weight: bold;
+        }
+
+    .buttontrack:hover span {
+        padding-right: 25px;
+    }
+
+        .buttontrack:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #ecc2c2;
+    border: none;
+    color: #808080;
+    text-align: left;
+    font-size: 15px;
+    padding: 20px;
+    width: 200px;
+    height: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+        font-weight: bold;
+    }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+            font-weight: bold;
+        }
+
+    .button:hover span {
+        padding-right: 25px;
+    }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+.weighttable {
+    font-size: 12px;
+    font-style: italic;
+    color: dimgray;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+

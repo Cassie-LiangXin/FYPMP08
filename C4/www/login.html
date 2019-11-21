@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html class="animated fadeIn">
+<head>
+    <!--
+            Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+            For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: http://* https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
+
+    <script src="lib/jquery-1.11.2.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="lib/jquery.validate.js"></script>
+
+    <title>Login</title>
+
+</head>
+<body class="background">
+
+    <div class="container">
+
+        <p></p><br />
+        <p align="center" style="color:black; font-size:50px; font-family:'Lobster', cursive; margin-top: -40px;">Login</p><br />
+
+        <!--<div class="animated slideInRight">
+            <img src="images/login.gif" class="center">
+        </div> -->
+
+        <form name="LoginForm" id="LoginForm">
+            <div class="animated slideInRight">
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <input type="text" name="txtLogin" id="txtLogin" placeholder="User ID or Email ID" required>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="animated slideInRight">
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <input type="password" name="txtPassword" id="txtPassword" placeholder="Enter your Password" required>
+                    </div>
+                </div>
+            </div>
+        </form><br />
+
+
+        <!--<input type="button" class="buttonedit buttonedit1" id="btnLogin" value="Login"><br />-->
+        <!--<button class="buttonnew" onclick="login()"><span>Login</span></button>-->
+
+
+
+
+        <div class="panel pink">
+            <button onclick="login()">Login</button>
+        </div><br />
+
+        <a align="center" style="color: black; font-size: 17px" href="signup.html" target="_self">New to JshopSpree? Sign up here!</a><br /><br />
+        <a align="center" style="color: black; font-size: 17px" href="forgetpassword.html" target="_self">Forgot your Password? Click here!</a>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/login.js"></script>
+    <script type="text/javascript" src="scripts/common.js"></script>
+</body>
+</html>

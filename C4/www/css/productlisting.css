@@ -1,0 +1,27 @@
+﻿.ui-loader {
+    display: none !important;
+}
+
+:focus {
+    outline: 0;
+    outline-color: transparent;
+    outline-style: none;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.container1 {
+    position: relative;
+    color: black;
+    font-family: "Cambria Math";
+    font-size: 17px;
+}
+
+tr.noBorder td {
+    border: 0;
+}
