@@ -7,9 +7,21 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
 
     <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/productdetails.css">
     <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
 
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+    <link rel="stylesheet" href="path/to/swiper.min.css">
+    <script src="path/to/swiper.min.js"></script>
 
 
     <script src="lib/jquery-1.11.2.min.js"></script>
@@ -21,27 +33,70 @@
 </head>
 <body>
 
+    <!-- Slider main container -->
+    <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><div class="user-pic"></div>1</div>
+            <div class="swiper-slide"><div class="user-pic"></div> 2</div>
+            <div class="swiper-slide"><div class="user-pic"></div>3</div>
+     
+        </div>
 
+    </div>
+
+    <div class="user-pic"></div>
     <p>Product Id:<span id="productid"></span></p>
     <p>Product Name:<span id="productname"></span></p>
     <p>Product Price:<span id="productprice"></span></p>
-    <p>Product Picture:<span id="productpicture"></span></p>
     <p>Product Brand:<span id="productbrand"></span></p>
     <p>Product Color:<span id="productcolor"></span></p>
     <p>Product Category:<span id="productcategory"></span></p>
 
-    <div align="center" style="background: #000; padding: 50px;">
+
+    <div class="avg">
+        <div class="stars-outer">
+            <div class="stars-inner"></div>
+        </div>
+        <span class="number-rating"></span>
+    </div>
+
+    <p><span id="averagerating"></span> average based on <span id="arraylength"></span></p>
+
+
+    <button class="btn btn-success add-cart btn-xs centeritem" pid="' + value.product_id + '">Add To Cart</button>
+
+    <p>Enter review here:</p>
+    <textarea id="review" rows="4" cols="50"></textarea>
+
+
+    <p>Enter ratings here:</p>
+    <div align="center" style="background: #000; padding: 20px;">
         <i class="fa fa-star fa-2x" data-index="0"></i>
         <i class="fa fa-star fa-2x" data-index="1"></i>
         <i class="fa fa-star fa-2x" data-index="2"></i>
         <i class="fa fa-star fa-2x" data-index="3"></i>
         <i class="fa fa-star fa-2x" data-index="4"></i>
     </div>
+    <br />
+
+    <button class="submit" id="submit">Submit Review</button>
+
 
 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="scripts/platformOverrides.js"></script>
     <script type="text/javascript" src="scripts/common.js"></script>
     <script type="text/javascript" src="scripts/productdetails.js"></script>
+
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+        })
+    </script>
 </body>
 </html>

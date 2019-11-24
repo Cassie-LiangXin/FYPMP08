@@ -1,5 +1,5 @@
-﻿//Press Show all to see products
-
+﻿
+//Shopping Cart
 $(document).ready(function () {
 
     $(document.body).on('click', '.add-cart', function () {
@@ -10,37 +10,38 @@ $(document).ready(function () {
     });
 
     function addcart() {
-       
+
         var url = serverURL() + "/shoppingcart.php";
-            var result;
+        var result;
 
-            var productid = localStorage.getItem("productid");
-            var customer_email = localStorage.getItem("customer_email");
-
-
+        var productid = localStorage.getItem("productid");
+        var customer_email = localStorage.getItem("customer_email");
 
 
+        var JSONObject = {
+            "productid": productid,
+            "customer_email": customer_email
+        };
 
-            var JSONObject = {
-                "productid": productid,
-                "customer_email": customer_email
-            };
 
+        $.ajax({
+            url: url,
+            type: 'GET',
+            data: JSONObject,
+            dataType: 'json',
+            contentType: "application/json; charset=utf-8",
+            success: function (arr) {
+               // _getaddcartResult(arr);
+                alert("Product Added to Cart!");
 
-            $.ajax({
-                url: url,
-                type: 'GET',
-                data: JSONObject,
-                dataType: 'json',
-                contentType: "application/json; charset=utf-8",
-                success: function (arr) {
-                    _getaddcartResult(arr);
-                },
-                error: function () {
-                    alert("fail");
-                }
-            });
-        
+      
+            
+            },
+            error: function () {
+                alert("fail");
+            }
+        });
+
     }
 
     function _getLoginResult(arr) {
@@ -53,10 +54,12 @@ $(document).ready(function () {
             window.location = "productlisting.html";
         }
         else {
-
             validationMsgs("Error in Username or Password", "Validation", "Try Again");
         }
     }
+
+
+
 
     //Activiating this fuction;
     getProduct();
@@ -77,12 +80,12 @@ $(document).ready(function () {
                 console.log(response);
                 var resp = jQuery.parseJSON(JSON.stringify(response));
 
-
+                console.log(resp);
 
                 var responselength = resp.message.length;
 
 
-                if (resp.status === 1) {
+                if (resp.status == 1) {
                     //creating a variable to store the final display conetent          
                     var ProductContent = '';
                     // creating two varible for the limit of items looped out each row in the page.
@@ -109,14 +112,9 @@ $(document).ready(function () {
                             '<br>' + value.product_color +
                             '<br>' + value.product_category +
                             '<br>' +   
-                            '<button pid="' + value.product_id + '" pname="' + value.product_name
-                            + '" pprice="' + value.product_price + '" ppicture="' + value.product_picture
-                            + '"  ppicture2="' + value.product_picture_2 + '"  ppicture3="' + value.product_picture_3
-                            + '"  ppicture4="' + value.product_picture_4 + '" pbrand="' + value.product_brand + '" pcolor="'
-                            + value.product_color + '" pcategory="' + value.product_category
-                            + '"  align: center  class="btn btn-success view-product btn-xs centeritem">View</button>' +
-                            '<button  class="btn btn-success add-cart btn-xs centeritem" pid="' + value.product_id + '">Add</button> '
-                            + '</div></div></div>';
+                            '<button  class="btn btn-success add-cart btn-xs centeritem" pid="' + value.product_id + '">Add</button> ' +
+                            '<button pid="' + value.product_id + '" pname="' + value.product_name + '" pprice="' + value.product_price + '" ppicture="' + value.product_picture + '"  ppicture2="' + value.product_picture_2 + '"  ppicture3="' + value.product_picture_3 + '"  ppicture4="' + value.product_picture_4 + '" pbrand="' + value.product_brand + '" pcolor="' + value.product_color + '" pcategory="' + value.product_category + '"  align: center  class="btn btn-success view-product btn-xs centeritem">View</button></div></div></div>';
+
                                                                                           
                         
    
@@ -189,7 +187,7 @@ function searchProduct() {
                 // creating two varible for the limit of items looped out each row in the page.
                 var tableitemcount = 0;
                 var tableitemlimit = 4;
-
+               
                 ProductContent += '<tr>';
                 //Looping the products out
                 $.each(resp.message, function (index, value) {

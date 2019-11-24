@@ -2,11 +2,11 @@
 
 $(document).ready(function () {
 
- 
+
 
     //Activiating this fuction;
     GET_ShoppingCart();
-  
+
     //Creating a function that get product basic details from the database
     function GET_ShoppingCart() {
         var useremail = localStorage.getItem("customer_email");
@@ -25,7 +25,7 @@ $(document).ready(function () {
                 var resp = jQuery.parseJSON(JSON.stringify(response));
 
 
-            
+
                 var responselength = resp.message.length;
 
 
@@ -36,24 +36,18 @@ $(document).ready(function () {
 
 
                         ' <h1>ShoppingCart</h1>'
-                    + ' <h1>productID</h1>'
+                        + ' <h1>productID</h1>'
 
 
                         ;
 
                     $.each(resp.message, function (index, value) {
-                       
+
                         if (useremail === value.customer_email) {
-                            
 
                             ProductContent +=
-
-
-                                ' <input type="checkbox" name="vehicle1" value="Bike"> ' + value.product_id + '<br>'
-
-
-                                ;
-
+                           '<img src="https://bitmp08.projectsbit.org/product_images/' + value.product_picture + '"style="width:100px; height:100px;"/>'+
+                           ' <input type="checkbox" name="vehicle1" value="Bike"> ' + value.product_id + ',' + value.product_name + ',' + '$' + value.product_price + '<br><hr>';
                         }
 
 
@@ -61,10 +55,10 @@ $(document).ready(function () {
                     ProductContent +=
 
 
-                        ' <button>Make Order</button>'
+                   //' <button>Make Order</button>';
 
 
-                        ;
+                        
 
                     $("#shoppingcart_list").html(ProductContent);
 
@@ -75,7 +69,6 @@ $(document).ready(function () {
     }
 
 });
-
 
 
 

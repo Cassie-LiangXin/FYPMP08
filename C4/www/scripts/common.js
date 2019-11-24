@@ -2,6 +2,9 @@
     window.location = "index.html";
 }
 
+function lol() {
+    window.location = "index.html";
+}
 
 function profile() {
     window.location = "profile.html";
@@ -9,9 +12,7 @@ function profile() {
 function products() {
     window.location = "productlisting.html";
 }
-function search() {
-    window.location = "search.html";
-}
+
 function contact() {
     window.location = "contact.html";
 }
