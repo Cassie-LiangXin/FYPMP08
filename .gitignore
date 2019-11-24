@@ -1,0 +1,4 @@
+
+*.user
+.vs/Default/v15/.suo
+*.xml
