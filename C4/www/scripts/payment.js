@@ -1,13 +1,10 @@
 ﻿
-    paypal.Buttons({
+paypal.Buttons({
         createOrder: function(data, actions) {
                     return actions.order.create({
         purchase_units: [
                             {
-        reference_id: "PUHF",
-        description: "Sporting Goods",
-        custom_id: "CUST-HighFashions",
-        soft_descriptor: "HighFashions",
+
         amount: {
         currency_code: "USD",
         value: "230.00",
@@ -67,18 +64,18 @@
                              }
                              ],
        shipping: {
-        method: "United States Postal Service",
+        method: "Singapore Postal Service",
         address: {
         name: {
-        full_name:"John",
-        surname:"Doe"
+        full_name:"J",
+        surname:"ShopSpree"
                             },
-       address_line_1: "123 Townsend St",
+       address_line_1: "123 Orchard St",
          address_line_2: "Floor 6",
-          admin_area_2: "San Francisco",
-          admin_area_1: "CA",
+          admin_area_2: "Singapore",
+          admin_area_1: "SG",
           postal_code: "94107",
-         country_code: "US"
+         country_code: "SG"
                                     }
                                 }
                             }
