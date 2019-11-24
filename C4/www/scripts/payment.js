@@ -7,7 +7,7 @@ paypal.Buttons({
 
         amount: {
         currency_code: "USD",
-        value: "230.00",
+        value: "170.00",
         breakdown: {
         item_total: {
         currency_code: "USD",
@@ -15,16 +15,10 @@ paypal.Buttons({
                             },
         shipping: {
         currency_code: "USD",
-        value: "30.00"
+        value: "00.00"
                             },
-         handling: {
-        currency_code: "USD",
-         value: "10.00"
-                            },
-        tax_total: {
-        currency_code: "USD",
-         value: "20.00"
-                           },
+
+
         shipping_discount: {
         currency_code: "USD",
           value: "10"
@@ -40,10 +34,7 @@ paypal.Buttons({
         currency_code: "USD",
          value: "90.00"
                             },
-         tax: {
-        currency_code: "USD",
-        value: "10.00"
-                            },
+
         quantity: "1",
         category: "PHYSICAL_GOODS"
                             },
@@ -55,29 +46,11 @@ paypal.Buttons({
         currency_code: "USD",
         value: "45.00"
                             },
-        tax: {
-        currency_code: "USD",
-        value: "5.00"
-                            },
         quantity: "2",
          category: "PHYSICAL_GOODS"
                              }
-                             ],
-       shipping: {
-        method: "Singapore Postal Service",
-        address: {
-        name: {
-        full_name:"J",
-        surname:"ShopSpree"
-                            },
-       address_line_1: "123 Orchard St",
-         address_line_2: "Floor 6",
-          admin_area_2: "Singapore",
-          admin_area_1: "SG",
-          postal_code: "94107",
-         country_code: "SG"
-                                    }
-                                }
+                             ]
+
                             }
                         ]
                     });
