@@ -50,10 +50,10 @@
                 <span class="cart-item cart-header cart-column">ITEM</span>
             </div>
             <div class="column">
-                <span class="cart-price1 cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
             </div>
             <div class="column">
-                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                <span class="cart-price1 cart-header cart-column">PRICE</span>
             </div>
         </div>
 
@@ -61,12 +61,20 @@
         <div class="cart-items">
 
         </div>
+        <div class="voucher">
+            
+                <strong class="cart-left cart-total-title">Voucher</strong><input name="vouchercode" id="vouchercode"  placeholder="Voucher Code" value=""><button class="submitvoucher">Redeem</button>
+            
+        </div><div class="cart-total">
 
-        <div class="cart-total">
-            <strong class="cart-total-title">Total</strong>
-            <span  class="cart-total-price">$39.97</span>
-        </div>
-        <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+    <strong class="cart-total-title discount-title">Discount</strong>
+    <span class="discount-price">$1.10</span>
+</div><div class="cart-total">
+
+    <strong class="cart-total-title">Total</strong>
+    <span class="cart-total-price">$39.97</span>
+</div>
+        <button class="btn btn-primary btn-purchase" style="margin:auto;display:block" onclick="makeorder()" type="button">PURCHASE</button>
     </section>
 
 
