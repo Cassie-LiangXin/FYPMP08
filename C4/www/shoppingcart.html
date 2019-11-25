@@ -5,34 +5,78 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-    <link rel="stylesheet" type="text/css" href="css/productlisting.css">
+    <link rel="stylesheet" type="text/css" href="css/shoppingcart.css">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
     <script src="lib/jquery-1.11.2.min.js"></script>
     <script src="lib/jquery.mobile-1.4.5.min.js"></script>
     <script src="lib/jquery.validate.js"></script>
 
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="scripts/shoppingcart.js" async></script>
+
     <title>Product Listing</title>
 </head>
 <body>
 
-    <!--This is a div for a table (FORM)-->
+
+
+    <!--This is a div for a table (FORM)
     <div class="table-responsive">
         <div id="shoppingcart_list">
 
         </div>
         <button>Make Order</button>
-    </div>
+    </div>-->
+
+
+    <section class="container content-section">
+        <h2 class="section-header">CART</h2>
+        <div class="cart-row">
+
+
+
+        </div>
+
+
+        <div class="row">
+            <div class="column">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+            </div>
+            <div class="column">
+                <span class="cart-price1 cart-header cart-column">PRICE</span>
+            </div>
+            <div class="column">
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+        </div>
+
+
+        <div class="cart-items">
+
+        </div>
+
+        <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <span  class="cart-total-price">$39.97</span>
+        </div>
+        <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+    </section>
+
+
 
 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+
     <script type="text/javascript" src="scripts/common.js"></script>
-    <script type="text/javascript" src="scripts/shoppingcart.js"></script>
+
+
 </body>
 </html>

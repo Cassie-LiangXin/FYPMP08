@@ -15,6 +15,7 @@
 
     <!--CSS-->
     <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
     <!--<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -35,7 +36,6 @@
     <script src="lib/jquery.mobile-1.4.5.min.js"></script>
     <script src="lib/jquery.validate.js"></script>
 
-
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
 
@@ -45,22 +45,103 @@
 
 </head>
 <body>
-
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7465722075526!2d103.75062531525587!3d1.3280583620137862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1140e9ae5367%3A0xe7e4a43acb6c89e1!2sJshopspree%20JSS!5e0!3m2!1sen!2ssg!4v1569568291106!5m2!1sen!2ssg" width="360" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    <iframe src="https://www.onemap.sg/amm/amm.html?mapStyle=Night&zoomLevel=14&marker=latLng:1.32855512493383,103.752749137065!iwt:JTNDcCUzRSUzQ3N0cm9uZyUzRUpTaG9wU3ByZWUlM0MlMkZzdHJvbmclM0UlM0MlMkZwJTNF!colour:red&popupWidth=200" height="400" width="380" scrolling="no" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
     <img src="images/5ae21cc526c97415d3213554.png" onclick="location.href='https://wa.me/6583897666';" style="width:80px; height:50px;" />
     <img src="images/Twitter_Sq-512.png" onclick="location.href='https://twitter.com/intent/tweet?screen_name=jshopspreejss&ref_src=twsrc%5Etfw';" style="width:70px; height:40px;" />
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <img src="images/facebookicon.png" onclick="location.href='http://m.me/jshopspree';" style="width:55px; height:45px;" />
     <input type="button" style="background-color:green;" onclick="location.href='https://wa.me/6583897666';" value="Whatsapp" />
 
-    <h5>
-        Email us at jshopspreejss@gmail.com
-        Find us at
-        Corporate Office
-        Block 18 Boon Lay Way Tradehub21 #02-145 Singapore 609966
-        (Our showroom also features our subsidiary streetwear brand Valour SG)
-    </h5>
+    <div class="container">
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0 d-inline">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Delivery
+                        </button>
+                    </h5>
 
+                </div>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body" id="child1">
+                        <div class="card">
+                            <div class="card-header">
+                                <a href="#" data-toggle="collapse" data-target="#collapseOneA">Where is your warehouse?</a>
+                            </div>
+                            <div class="card-body collapse" data-parent="#child1" id="collapseOneA">
+                                Our warehouse is located at: <br />
+                                -18 Boon Lay Way TradeHub 21 #02-145 609966
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a href="#" data-toggle="collapse" data-target="#collapseOneB">How can I contact you?</a>
+                            </div>
+                            <div class="card-body collapse" data-parent="#child1" id="collapseOneB">
+                                Please feel free to contact us at:<br />
+                                -WhatsApp Us at +65 8389 7666 <br />
+                                -Alternatively, you can email us at jshopspreejss@gmail.com
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a href="#" data-toggle="collapse" data-target="#collapseOneC">What about shipping?</a>
+                            </div>
+                            <div class="card-body collapse" data-parent="#child1" id="collapseOneC">
+                                Fast Domestic Delivery within 24 hours via: <br />
+                                -Singpost Normal Mail <br />
+                                -Singpost Registered Mail <br />
+                                -Express Courier <br /> <br />
+                                International Order will be shipped via: <br />
+                                -FedEx <br />
+                                -Singpost International Registered Mail
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a href="#" data-toggle="collapse" data-target="#collapseOneD">Where can I meet you for self-collection?</a>
+                            </div>
+                            <div class="card-body collapse" data-parent="#child1" id="collapseOneD">
+                                Feel free to meet me at these locations for a self-collection: <br />
+                                -360 Yung An Road<br />
+                                -Lakeside MRT<br />
+                                -Lavender MRT<br /> <br />
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Payment
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body" id="child2">
+                        <div class="card">
+                            <div class="card-header">
+                                <a href="#" data-toggle="collapse" data-target="#collapseTwoA">What are the methods of payment?</a>
+                            </div>
+                            <div class="card-body collapse" data-parent="#child2" id="collapseTwoA">
+                                We accept a wide range of payment methods: <br />
+                                -Bank Transfer <br />
+                                -Cash <br />
+                                -PayNow <br />
+                                -PayLah!
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
     <div class="container">
         <form name="SendFeedbackForm" id="SendFeedbackForm">
 
@@ -75,8 +156,8 @@
                     <label for="txtfeedback_sender_email">Email</label>
                     <input type="text" name="txtfeedback_sender_email" id="txtfeedback_sender_email" placeholder="Enter your email" class="form-control" required>
                 </div>
-                <input type="checkbox" name="CheckBoxAnonymous" id="CheckBoxAnonymous" style="margin-left:20px;" onchange="toggleDisabled(this.checked)" > Submit As Anonymous<br><br>
-                
+                <input type="checkbox" name="CheckBoxAnonymous" id="CheckBoxAnonymous" style="margin-left:20px;" onchange="toggleDisabled(this.checked)"> Submit As Anonymous<br><br>
+
                 <div class="col-md-12 form-group">
                     <label for="txtfeedback_subject">Subject</label>
                     <input type="text" name="txtfeedback_subject" id="txtfeedback_subject" placeholder="Enter your subject" class="form-control" required>
@@ -93,6 +174,9 @@
         </form>
         <input type="submit" value="Submit" id="btnSendFeedback">
         <input type="submit" value="Chatbot">
+
+
+
     </div>
 
 

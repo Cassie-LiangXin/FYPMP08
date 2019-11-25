@@ -39,20 +39,23 @@
         <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide"><div class="user-pic"></div>1</div>
-            <div class="swiper-slide"><div class="user-pic"></div> 2</div>
-            <div class="swiper-slide"><div class="user-pic"></div>3</div>
-     
+            <div class="swiper-slide"><div class="user-pic2"></div> 2</div>
+            <div class="swiper-slide"><div class="user-pic3"></div>3</div>
+            <div class="swiper-slide"><div class="user-pic4"></div>4</div>
+
         </div>
 
     </div>
 
-    <div class="user-pic"></div>
+
     <p>Product Id:<span id="productid"></span></p>
     <p>Product Name:<span id="productname"></span></p>
     <p>Product Price:<span id="productprice"></span></p>
+    <p>Product Description:<br /><span id="productdescription"></span></p>
     <p>Product Brand:<span id="productbrand"></span></p>
     <p>Product Color:<span id="productcolor"></span></p>
     <p>Product Category:<span id="productcategory"></span></p>
+
 
 
     <div class="avg">
@@ -94,7 +97,8 @@
         var mySwiper = new Swiper('.swiper-container', {
             // Optional parameters
             direction: 'horizontal',
-            loop: true,
+            loop: false,
+
 
         })
     </script>
