@@ -12,7 +12,7 @@ $(document).ready(function () {
         var url = "https://bitmp08.projectsbit.org/MobileApp/getshoppingcart.php";
 
         $.ajax({
-
+     
             url: url,
             method: 'POST',
             data: { GET_ShoppingCart: 1 },
@@ -38,7 +38,7 @@ $(document).ready(function () {
 
                                         '<td><div class="cart-quantity cart-column">'+
                             '<span class="cart-price cart-column">$' + value.product_price +'</span>' +
-                                         '<button id="' + value.product_id + '" class="btn btn-danger" type="button">REMOVE</button>'+
+                                         '<button id="' + value.product_id + '" class="btn btn-danger btn-delete" type="button">REMOVE</button>'+
                                          '</div></td>'+
                                 '</div></tr>';
 
@@ -56,15 +56,15 @@ $(document).ready(function () {
 
         
     //Execute Remove
-    $(document.body).on('click', '.btn-danger', function () {
+    $(document.body).on('click', '.btn-delete', function () {
 
         var buttonClicked = event.target;
-        buttonClicked.parentElement.parentElement.remove();
+        buttonClicked.parentElement.remove();
             var productid = $(this).attr('id');
             localStorage.setItem("productid", productid);
             removefromcart();
             updateCartTotal();
-        
+
     }); 
 
     //Change quantity
@@ -161,6 +161,10 @@ function removefromcart() {
         success: function (arr) {
             //_changeAddressResult(arr);
             alert('Removed');
+            
+            window.location.reload();
+            //window.location.href = "shoppingcart.html";  
+            
         },
         error: function () {
             alert("FAIL");
@@ -190,12 +194,17 @@ function updateCartTotal() {
              total += price * quantity;
          } 
 
-        discountamount = localStorage.getItem("voucher_amount_deducted");
-        if (discountamount < 0) { discountamount = 0; }
+ 
     }
      total = Math.round(total * 100) / 100;
      total = total - discountamount;
-     if (total < 0) { total = 0; }
+     discountamount = localStorage.getItem("voucher_amount_deducted");
+   
+       var discountcheck = "undefined";
+        var badvalue = 0;
+        if (discountamount === discountcheck) { discountamount = badvalue; }
+        
+        if (total < 0) { total = badvalue; }
      document.getElementsByClassName('discount-price')[0].innerText = '$' + discountamount;
     document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total;
 localStorage.setItem("totalamount", total);
@@ -204,9 +213,19 @@ localStorage.setItem("totalamount", total);
 
 
   function makeorder() {
-       
-     window.location.href = "payment.html";  
-       //alert("Please choose atleat one product to check out");
+      var orderamount = localStorage.getItem("totalamount");
+      var falsevalue = 0;
+      
+
+      if (orderamount > falsevalue) {
+          window.location.href = "payment.html";  
+      } else {
+          alert("Please Choose at least one item");
+      }
+      
+    
+    // window.location.href = "payment.html";  
+       //
    
     }
 

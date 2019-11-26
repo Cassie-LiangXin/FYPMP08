@@ -13,7 +13,11 @@
     font-family: Raleway;
     color: #777;
 }
-
+body {
+    background-image: linear-gradient(45deg, #007adf, #00ecbc);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .ui-loader {
     display: none !important;
 }
@@ -84,9 +88,11 @@ html, body {
     margin: 0 auto;
     padding: 0 1.5em;
 }
-
+.words{
+font-weight: normal;
+color: #333;
+text-align: center;}
 .section-header {
-    font-family: "Metal Mania";
     font-weight: normal;
     color: #333;
     text-align: center;
@@ -242,7 +248,7 @@ html, body {
 }
 
 .cart-header {
-    font-weight: bold;
+    
     font-size: 1.25em;
     color: #333;
 }
