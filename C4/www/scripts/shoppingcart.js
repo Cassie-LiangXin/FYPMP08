@@ -8,7 +8,7 @@ var zero = 0;
 var badvalue = 0;
 var OrderArray = [];
 var discountcheck = "undefined";
-var orders_transaction_status = "In Progress";
+var orders_transaction_status = "UnPaid";
 var goodstatus = 1;
 $(document).ready(function () {
     localStorage.setItem("voucher_amount_deducted", zero);
@@ -98,6 +98,9 @@ $(document).ready(function () {
             var productid = $(this).attr('id');
             localStorage.setItem("productid", productid);
             removefromcart();
+            alert(' item Removed');
+
+            window.location.reload();
             updateCartTotal();
 
     }); 
@@ -159,7 +162,9 @@ function _getvarifyvoucherResult(arr) {
     localStorage.setItem("voucher_id", arr[0].voucher_id);
     localStorage.setItem("voucher_code", arr[0].voucher_code);
     localStorage.setItem("voucher_amount_deducted", arr[0].voucher_amount_deducted);
+    checkvoucher();
     updateCartTotal();
+    
     if (arr[0].result.trim() !== "0") {
 
 
@@ -179,9 +184,14 @@ function checkvoucher() {
     discountamount = localStorage.getItem("voucher_amount_deducted");
     voucherid = localStorage.getItem("voucher_id");
     voucher_code = localStorage.getItem("voucher_code");
-    if (discountamount === discountcheck) { discountamount = badvalue; }
+    if (discountamount === discountcheck) { discountamount = badvalue; voucher_code = nothing; }
     if (voucherid === discountcheck) { voucherid = badvalue; }
     if (voucher_code === discountcheck) { voucher_code = nothing; }
+    localStorage.setItem("discountamount", discountamount);
+    localStorage.setItem("voucherid", voucherid);
+    localStorage.setItem("voucher_code", voucher_code);
+
+  
 }
 //Remove from Cart
 function removefromcart() {
@@ -203,9 +213,9 @@ function removefromcart() {
         contentType: "application/json; charset=utf-8",
         success: function (arr) {
             //_changeAddressResult(arr);
-            alert('Removed');
+            //alert(' item Removed');
             
-            window.location.reload();
+            //window.location.reload();
             //window.location.href = "shoppingcart.html";  
             
         },
@@ -247,7 +257,9 @@ function updateCartTotal() {
         if (total < 0) { total = badvalue; }
     }
      total = Math.round(total * 100) / 100;
+     localStorage.setItem("orders_total_amount", total );
      total = total - discountamount;
+
      if (total < 0) { total = badvalue; }
      document.getElementsByClassName('discount-price')[0].innerText = '$' + discountamount;
     document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total;
@@ -264,17 +276,33 @@ function getdate() {
     var year = d.getFullYear();
     var getdates = "" + day + "/" + month + "/" + year + "";
     getdates = getdates.toString();
-    localStorage.setItem("getdates", getdates);}
+    localStorage.setItem("getdates", getdates);
+}
+function makeid(length) {
+    var result = '';
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for (var i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+   // alert(result);
+    localStorage.setItem("orders_code", result);
+
+    
+   
+}
+
+
 function uploadOrder() {
     
     var url = "https://bitmp08.projectsbit.org/MobileApp/createorder.php";
     var result;
     getdate();
     //for database var 
-
+    makeid(5);
    
     var orders_date = localStorage.getItem("getdates");
-    alert(orders_date);
+  //  alert(orders_date);
     var orders_voucher_applied = localStorage.getItem("voucher_code");
     var orders_discount_amount = localStorage.getItem("voucher_amount_deducted");
     var orders_final_amount = localStorage.getItem("totalamount");
@@ -282,7 +310,8 @@ function uploadOrder() {
     var orders_payment_status = localStorage.getItem("orders_transaction_status");
     var orders_points_allocated = Math.round(orders_final_amount);
     var customer_id = localStorage.getItem("customer_id");
-    var orders_total_amount = orders_discount_amount + orders_final_amount;
+    var orders_total_amount = localStorage.getItem("orders_total_amount");
+    var orders_code = localStorage.getItem("orders_code");
     
     var JSONObject = {
         "OrderArray": OrderArray,
@@ -294,7 +323,8 @@ function uploadOrder() {
         "orders_payment_date": orders_payment_date,
         "orders_payment_status": orders_payment_status,
         "orders_points_allocated": orders_points_allocated,
-        "customer_id": customer_id
+        "customer_id": customer_id,
+        "orders_code": orders_code
     };
 
 
@@ -307,7 +337,7 @@ function uploadOrder() {
         contentType: "application/json; charset=utf-8",
         success: function (arr) {
             // _getaddcartResult(arr);
-            alert("Product Added to Cart!");
+            alert("Order success!");
         },
         error: function () {
             alert("fail");
@@ -319,7 +349,7 @@ function uploadOrder() {
 function makeorder() {
     var orderamount = localStorage.getItem("totalamount");
     var falsevalue = 0;
-
+    checkvoucher();
 
     if (orderamount > falsevalue) {
         var cartItemContainer = document.getElementsByClassName('cart-items')[0];
@@ -329,13 +359,18 @@ function makeorder() {
             var checkBox = cartRow.getElementsByClassName('myCheck')[0];
             if (checkBox.checked === true) {
                 OrderArray.push(checkBox.id);
-               
+                localStorage.setItem("productid", checkBox.id);
+                removefromcart();
             }
                    
         } //alert(OrderArray);
         localStorage.setItem("OrderArray", OrderArray);
         uploadOrder();
-        window.location.href = "payment.html";
+        //window.location.reload();
+
+        localStorage.setItem("voucher_code", nothing);
+
+        window.location.href = "orders.html";
     } else {
         alert("Please Choose at least one item");
     }

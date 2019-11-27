@@ -22,44 +22,31 @@
     <title>Product Listing</title>
 </head>
 <body>
-    <div class="container">
-        <!--This is a Division that put everything inside on one row-->
-        <div class="row">
+
             <!--This is a Division with class that sets the content color and spacing-->
             <div class="col-2 whitecolor">
                 <!--This is a title-->
 
-                <h1>Product</h1>
+                <h1>Orders</h1>
             </div>
-            <!--This is a div for a search bar (FORM)-->
-            <div data-role="content" class="ui-content " id="SearchSection">
-                <form class="search-bar" id="product-search-form">
-                    <input type="text" name="pname" class="form-control" placeholder="Enter keywords">
-                    <input type="hidden" name="product_search" value="1">
-                </form>
-            </div>
-            <!--This is a div for a Search Product Button(FORM)-->
 
-            <button class="btn btn-primary search-btn " value="Search Product" id="search-btn">Search Product</button>
-
-            <!--This is a div for a Add Product Button (FORM)-->
-
-            <button onclick="products()" class="btn btn-primary showall-btn " value="Show All" id="showall-btn">Show All</button>
-            <button onclick="goCart()" class="btn btn-primary " >Cart</button>
-
-        </div><br />
-    </div>
     <!--This is a div for a table (FORM)-->
-    <div class="table-responsive">
-        <div id="product_list">
-
-        </div>
-    </div>
+            <div class="table-responsive">
+                <table style="width:100%">
+                    <tr>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Order Date</th>
+                    </tr>
+                    <tbody class="Orders"></tbody>
+                </table>
+               
+            </div>
 
 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="scripts/platformOverrides.js"></script>
     <script type="text/javascript" src="scripts/common.js"></script>
-    <script type="text/javascript" src="scripts/productlisting.js"></script>
+    <script type="text/javascript" src="scripts/orders.js"></script>
 </body>
 </html>

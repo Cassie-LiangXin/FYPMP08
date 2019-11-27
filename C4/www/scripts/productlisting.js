@@ -66,7 +66,7 @@ $(document).ready(function () {
 
     //Creating a function that get product basic details from the database
     function getProduct() {
-        var url = "https://bitmp08.projectsbit.org/MobileApp/getproducts.php";
+        var url = serverURL() + "getproducts.php";
         // this  the start of a ajax function (a fuction use to call to php for database query)
         $.ajax({
             // 1. set the destination for this package of content
@@ -85,7 +85,7 @@ $(document).ready(function () {
                 var responselength = resp.message.length;
 
 
-                if (resp.status == 1) {
+                if (resp.status === 1) {
                     //creating a variable to store the final display conetent          
                     var ProductContent = '';
                     // creating two varible for the limit of items looped out each row in the page.
@@ -115,7 +115,7 @@ $(document).ready(function () {
                             '<button  class="btn btn-success add-cart btn-xs centeritem" pid="' + value.product_id + '">Add</button> ' +
                             '<button pid="' + value.product_id + '" pname="' + value.product_name + '" pprice="' + value.product_price + '" ppicture="' + value.product_picture + '"  ppicture2="' + value.product_picture_2 + '"  ppicture3="' + value.product_picture_3 + '"  ppicture4="' + value.product_picture_4 + '" pbrand="' + value.product_brand + '" pcolor="' + value.product_color + '" pcategory="' + value.product_category + '"  align: center  class="btn btn-success view-product btn-xs centeritem">View</button></div></div></div>';
 
-                                                                                          
+                                                  
                         
    
              
@@ -181,13 +181,13 @@ function searchProduct() {
         success: function (response) {
             console.log(response);
             var resp = jQuery.parseJSON(JSON.stringify(response));
-            if (resp.status == 1) {
+            if (resp.status === 1) {
                 //creating a variable to store the final display conetent          
                 var ProductContent = '';
                 // creating two varible for the limit of items looped out each row in the page.
                 var tableitemcount = 0;
                 var tableitemlimit = 4;
-               
+
                 ProductContent += '<tr>';
                 //Looping the products out
                 $.each(resp.message, function (index, value) {
@@ -227,7 +227,7 @@ function searchProduct() {
 
             }
         }
-    })
+    });
 }
 
 
