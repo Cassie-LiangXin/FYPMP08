@@ -137,7 +137,7 @@ function shoppingcart() {
 }
 
 function orders() {
-    window.location = "myorders.html";
+    window.location = "payment.html";
 }
 
 function mydetails() {

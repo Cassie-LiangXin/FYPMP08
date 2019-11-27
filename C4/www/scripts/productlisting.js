@@ -104,13 +104,13 @@ $(document).ready(function () {
 
                             '<div class="col-xs-6">' +
                             '<div class="panel panel-info">' +          
-                            '<div class="panel-heading" style="font-size: px;">' + value.product_id +'<br>'+ value.product_name + '</div>' +
+                            '<div class="panel-heading" style="font-size: px;">' +'<br>Product:'+ value.product_name + '</div>' +
                             '<div class="panel-body">' +
                             '<img src="https://bitmp08.projectsbit.org/product_images/' + value.product_picture + '"style="width:100px; height:100px;"/>' +
                             '</div><div class="panel-heading">$' + value.product_price + '.00' +
-                            '<br>' + value.product_brand +
-                            '<br>' + value.product_color +
-                            '<br>' + value.product_category +
+                            '<br>Brand: ' + value.product_brand +
+                            '<br>Color: ' + value.product_color +
+                            '<br>Category: ' + value.product_category +
                             '<br>' +   
                             '<button  class="btn btn-success add-cart btn-xs centeritem" pid="' + value.product_id + '">Add</button> ' +
                             '<button pid="' + value.product_id + '" pname="' + value.product_name + '" pprice="' + value.product_price + '" ppicture="' + value.product_picture + '"  ppicture2="' + value.product_picture_2 + '"  ppicture3="' + value.product_picture_3 + '"  ppicture4="' + value.product_picture_4 + '" pbrand="' + value.product_brand + '" pcolor="' + value.product_color + '" pcategory="' + value.product_category + '"  align: center  class="btn btn-success view-product btn-xs centeritem">View</button></div></div></div>';
@@ -278,3 +278,4 @@ $(document.body).on('click', '.view-product', function () {
 
 });
 
+function goCart() { window.location.href = "shoppingcart.html";  }

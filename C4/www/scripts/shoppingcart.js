@@ -2,6 +2,7 @@
 var items = 0;
 var discountamount = 0;
 var zero = 0;
+var OrderArray = [];
 localStorage.setItem("voucher_amount_deducted", zero);
 $(document).ready(function () {
 
@@ -29,7 +30,7 @@ $(document).ready(function () {
                             items = items + 1;
                             ProductContent +=                              
                                 '<tr class="cart-row"><div class="cart-row" >'+
-                                    '<td><input type="checkbox" class="myCheck"  onclick="updateCartTotal()"></td><td><div class="cart-item cart-column">'+
+                            '<td><input type="checkbox" class="myCheck" id="' + value.product_id + '"  onclick="updateCartTotal()"></td><td><div class="cart-item cart-column">'+
                                         '<img class="cart-item-image" src="https://bitmp08.projectsbit.org/product_images/' + value.product_picture + '" width="100" height="100">' +
                                         ''+
                                     '</div><span class="cart-item-title">' + value.product_name +'</span></td>'+
@@ -186,25 +187,27 @@ function updateCartTotal() {
 
         var priceElement = cartRow.getElementsByClassName('cart-price')[0];
         var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0];
-
+        
         
         var price = parseFloat(priceElement.innerText.replace('$', ''));
         var quantity = quantityElement.value;
         if (checkBox.checked === true) {
-             total += price * quantity;
+            total += price * quantity;
+            
+        
          } 
 
- 
-    }
-     total = Math.round(total * 100) / 100;
-     total = total - discountamount;
-     discountamount = localStorage.getItem("voucher_amount_deducted");
+      discountamount = localStorage.getItem("voucher_amount_deducted");
    
        var discountcheck = "undefined";
         var badvalue = 0;
         if (discountamount === discountcheck) { discountamount = badvalue; }
         
         if (total < 0) { total = badvalue; }
+    }
+     total = Math.round(total * 100) / 100;
+     total = total - discountamount;
+
      document.getElementsByClassName('discount-price')[0].innerText = '$' + discountamount;
     document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total;
 localStorage.setItem("totalamount", total);
@@ -212,21 +215,32 @@ localStorage.setItem("totalamount", total);
 }
 
 
-  function makeorder() {
-      var orderamount = localStorage.getItem("totalamount");
-      var falsevalue = 0;
-      
 
-      if (orderamount > falsevalue) {
-          window.location.href = "payment.html";  
-      } else {
-          alert("Please Choose at least one item");
-      }
-      
-    
+function makeorder() {
+    var orderamount = localStorage.getItem("totalamount");
+    var falsevalue = 0;
+
+
+    if (orderamount > falsevalue) {
+        var cartItemContainer = document.getElementsByClassName('cart-items')[0];
+        var cartRows = cartItemContainer.getElementsByClassName('cart-row');
+        for (var i = 0; i < cartRows.length; i++) {
+            var cartRow = cartRows[i];
+            var checkBox = cartRow.getElementsByClassName('myCheck')[0];
+            if (checkBox.checked === true) {
+                OrderArray.push(checkBox.id);
+               
+            }
+                   
+        } //alert(OrderArray);
+        localStorage.setItem("OrderArray", OrderArray);
+        window.location.href = "payment.html";
+    } else {
+        alert("Please Choose at least one item");
+    }
+}
     // window.location.href = "payment.html";  
        //
    
-    }
 
-
+function goShop() { window.location.href = "productlisting.html"; }
