@@ -20,7 +20,7 @@
             },
             errorPlacement: function (error, element) {
                 error.appendTo(element.parent().parent().after());
-            },
+            }
         });
 
         $("#btnLogin").bind("click", function () {

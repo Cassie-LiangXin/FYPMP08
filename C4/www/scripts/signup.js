@@ -210,7 +210,7 @@ $(document).ready(function (e) {
                 },
                 success: function (response) { //console.log(response);
                     $('.statusMsg').html('');
-                    if (response.status == 1) {
+                    if (response.status === 1) {
                         /* $('#NewUserForm')[0].reset(); */
                         /* $('.statusMsg').html('<p class="alert alert-success">' + response.message + '</p>');*/
 

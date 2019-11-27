@@ -1,6 +1,6 @@
 ﻿var totalamount = localStorage.getItem("totalamount");
 
-
+var OrderArray = localStorage.getItem("OrderArray");
 
 
 paypal.Buttons({

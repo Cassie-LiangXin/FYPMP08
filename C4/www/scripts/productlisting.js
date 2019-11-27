@@ -44,17 +44,17 @@ $(document).ready(function () {
 
     }
 
-    function _getLoginResult(arr) {
+    function _getaddcartResult(arr) {
         if (arr[0].result.trim() !== "0") {
             localStorage.setItem("customer_username", customer_username);
             localStorage.setItem("customer_password", customer_password);
             localStorage.setItem("customer_email", customer_email);
 
             /*validationMsgs("Login OK", "Information", "OK");*/
-            window.location = "productlisting.html";
+            window.location = ".html";
         }
         else {
-            validationMsgs("Error in Username or Password", "Validation", "Try Again");
+            validationMsgs("Error in _getaddcartResult", "Validation", "Try Again");
         }
     }
 

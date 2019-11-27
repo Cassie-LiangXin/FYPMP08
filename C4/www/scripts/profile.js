@@ -51,6 +51,7 @@
         }
 
         function _getProfileResult(arr) {
+            customer_id = arr[0].customer_id;
             customer_username = arr[0].customer_username;
             customer_first_name = arr[0].customer_first_name;
             customer_last_name = arr[0].customer_last_name;
@@ -68,7 +69,7 @@
             var profilepicture = "<img width='100%' height='100%' src='http://bitmp08.projectsbit.org/MobileApp/uploads/" + customer_pic + "' />";
             $(".user-pic").html(profilepicture);
             $("#lbluserid").html(customer_first_name);
-
+            localStorage.setItem("customer_id", customer_id);
             localStorage.setItem("customer_username", customer_username);
             localStorage.setItem("customer_first_name", customer_first_name);
             localStorage.setItem("customer_last_name", customer_last_name);
