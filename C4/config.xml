@@ -104,4 +104,11 @@
     <splash src="res/screens/windows/SplashScreenPhone.scale-240.png" width="1152" height="1920" />
   </platform>
   <plugin name="cordova-plugin-dialogs" spec="~2.0.2" />
+  <plugin name="cordova-plugin-vuforia" spec="~3.2.1" />
+  <plugin name="cordova-plugin-vuforia-sdk" spec="~6.0.117" />
+  <plugin name="cordova-plugin-media" spec="~2.4.1" />
+  <plugin name="cordova-plugin-file" spec="~6.0.2" />
+  <plugin name="cordova-plugin-device" spec="~2.0.3" />
+  <plugin name="cordova-plugin-compat" spec="~1.0.0" src="C:\Users\ZouZeRen\Documents\GitHub\New folder\cordova-vuforia-example\plugins\cordova-plugin-compat" />
+  <plugin name="cordova-plugin-android-support-v4" spec="~21.0.1" />
 </widget>

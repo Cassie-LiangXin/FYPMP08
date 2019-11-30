@@ -80,8 +80,24 @@ $(document).ready(function () {
             success: function (arr) {
                 _getgetCustomerIdResult(arr);
             },
-            error: function () {
-                alert("FAIL");
+            error: function (arr) {
+                var msg = '';
+                if (jqXHR.status === 0) {
+                    msg = 'Not connect.\n Verify Network.';
+                } else if (arr.status === 404) {
+                    msg = 'Requested page not found. [404]';
+                } else if (arr.status === 500) {
+                    msg = 'Internal Server Error [500].';
+                } else if (exception === 'parsererror') {
+                    msg = 'Requested JSON parse failed.';
+                } else if (exception === 'timeout') {
+                    msg = 'Time out error.';
+                } else if (exception === 'abort') {
+                    msg = 'Ajax request aborted.';
+                } else {
+                    msg = 'Uncaught Error.\n' + arr.response;
+                }
+                alert(msg);
             }
         });
     }
@@ -148,13 +164,27 @@ function varifyvoucher() {
         dataType: 'json',
         contentType: "application/json; charset=utf-8",
         success: function (arr) {
-            //get and save voucher id 
-            //get and save voucher value;
-           // alert('true');
+
             _getvarifyvoucherResult(arr);
         },
-        error: function () {
-            alert("Please Enter Correct Voucher Code");
+        error: function (arr) {
+            var msg = '';
+            if (jqXHR.status === 0) {
+                msg = 'Not connect.\n Verify Network.';
+            } else if (arr.status === 404) {
+                msg = 'Requested page not found. [404]';
+            } else if (arr.status === 500) {
+                msg = 'Internal Server Error [500].';
+            } else if (exception === 'parsererror') {
+                msg = 'Requested JSON parse failed.';
+            } else if (exception === 'timeout') {
+                msg = 'Time out error.';
+            } else if (exception === 'abort') {
+                msg = 'Ajax request aborted.';
+            } else {
+                msg = 'Uncaught Error.\n' + arr.response;
+            }
+            alert(msg);
         }
     });
 }
@@ -166,13 +196,7 @@ function _getvarifyvoucherResult(arr) {
     updateCartTotal();
     
     if (arr[0].result.trim() !== "0") {
-
-
         var test = localStorage.getItem("voucher_amount_deducted");
-
-
-        /*validationMsgs("Login OK", "Information", "OK");*/
-        //updateCartTotal();
     }
     else {
         alert("Please Enter Correct Voucher Code");
@@ -197,13 +221,12 @@ function checkvoucher() {
 function removefromcart() {
     var productid = localStorage.getItem("productid");
 
-
     var url = serverURL() + "/removefromcart.php";
 
     var JSONObject = {
-        "productid": productid
-    };
-  
+        "productid": productid,
+        "customer_email": localStorage.getItem("customer_email")
+    };  
 
     $.ajax({
         url: url,
@@ -212,15 +235,26 @@ function removefromcart() {
         dataType: 'json',
         contentType: "application/json; charset=utf-8",
         success: function (arr) {
-            //_changeAddressResult(arr);
-            //alert(' item Removed');
-            
-            //window.location.reload();
-            //window.location.href = "shoppingcart.html";  
-            
+
         },
-        error: function () {
-            alert("FAIL");
+        error: function (arr) {
+            var msg = '';
+            if (jqXHR.status === 0) {
+                msg = 'Not connect.\n Verify Network.';
+            } else if (arr.status === 404) {
+                msg = 'Requested page not found. [404]';
+            } else if (arr.status === 500) {
+                msg = 'Internal Server Error [500].';
+            } else if (exception === 'parsererror') {
+                msg = 'Requested JSON parse failed.';
+            } else if (exception === 'timeout') {
+                msg = 'Time out error.';
+            } else if (exception === 'abort') {
+                msg = 'Ajax request aborted.';
+            } else {
+                msg = 'Uncaught Error.\n' + arr.response;
+            }
+            alert(msg);
         }
     });
 }
@@ -230,22 +264,19 @@ function updateCartTotal() {
     var cartItemContainer = document.getElementsByClassName('cart-items')[0];
     var cartRows = cartItemContainer.getElementsByClassName('cart-row');
     var total = 0;
-   // alert(items);
-     //alert("cartrows"+ cartRows.length);
+
      for (var i = 0; i < cartRows.length; i++) {
          var cartRow = cartRows[i];
          var checkBox = cartRow.getElementsByClassName('myCheck')[0];
 
         var priceElement = cartRow.getElementsByClassName('cart-price')[0];
         var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0];
-        
-        
+
         var price = parseFloat(priceElement.innerText.replace('$', ''));
         var quantity = quantityElement.value;
         if (checkBox.checked === true) {
             total += price * quantity;
-            
-        
+
          } 
 
       discountamount = localStorage.getItem("voucher_amount_deducted");
@@ -294,15 +325,11 @@ function makeid(length) {
 
 
 function uploadOrder() {
-    
     var url = "https://bitmp08.projectsbit.org/MobileApp/createorder.php";
     var result;
     getdate();
-    //for database var 
-    makeid(5);
-   
+    makeid(5);  
     var orders_date = localStorage.getItem("getdates");
-  //  alert(orders_date);
     var orders_voucher_applied = localStorage.getItem("voucher_code");
     var orders_discount_amount = localStorage.getItem("voucher_amount_deducted");
     var orders_final_amount = localStorage.getItem("totalamount");
@@ -327,7 +354,6 @@ function uploadOrder() {
         "orders_code": orders_code
     };
 
-
     
     $.ajax({
         url: url,
@@ -336,21 +362,35 @@ function uploadOrder() {
         dataType: 'json',
         contentType: "application/json; charset=utf-8",
         success: function (arr) {
-            // _getaddcartResult(arr);
             alert("Order success!");
+            window.location.href = "orders.html";
         },
-        error: function () {
-            alert("fail");
+        error: function (arr) {
+            var msg = '';
+            if (jqXHR.status === 0) {
+                msg = 'Not connect.\n Verify Network.';
+            } else if (arr.status === 404) {
+                msg = 'Requested page not found. [404]';
+            } else if (arr.status === 500) {
+                msg = 'Internal Server Error [500].';
+            } else if (exception === 'parsererror') {
+                msg = 'Requested JSON parse failed.';
+            } else if (exception === 'timeout') {
+                msg = 'Time out error.';
+            } else if (exception === 'abort') {
+                msg = 'Ajax request aborted.';
+            } else {
+                msg = 'Uncaught Error.\n' + arr.response;
+            }
+            alert(msg);
         }
     });
  
 }
-
 function makeorder() {
     var orderamount = localStorage.getItem("totalamount");
     var falsevalue = 0;
     checkvoucher();
-
     if (orderamount > falsevalue) {
         var cartItemContainer = document.getElementsByClassName('cart-items')[0];
         var cartRows = cartItemContainer.getElementsByClassName('cart-row');
@@ -361,16 +401,11 @@ function makeorder() {
                 OrderArray.push(checkBox.id);
                 localStorage.setItem("productid", checkBox.id);
                 removefromcart();
-            }
-                   
-        } //alert(OrderArray);
+            }                   
+        } 
         localStorage.setItem("OrderArray", OrderArray);
         uploadOrder();
-        //window.location.reload();
-
         localStorage.setItem("voucher_code", nothing);
-
-        window.location.href = "orders.html";
     } else {
         alert("Please Choose at least one item");
     }
